@@ -1,0 +1,4 @@
+black
+pylint
+pytest==7.4.0
+pytest-cov
