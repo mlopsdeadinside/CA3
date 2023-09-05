@@ -4,12 +4,15 @@
 name: Python application
 on:
   push:
-    branches: [ "Member_1" ]
+    branches: [ "main" ]
 permissions:
   contents: read
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
