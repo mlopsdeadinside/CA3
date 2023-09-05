@@ -1,4 +1,4 @@
-[![Python Application](https://github.com/Raheimeen/ClassWork/actions/workflows/python-app.yml/badge.svg)]
+[![Python Application](https://github.com/Raheimeen/ClassWork/actions/workflows/ci.yml/badge.svg)]
 
 Scaffolding
 
