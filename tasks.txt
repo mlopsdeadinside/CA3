@@ -1,0 +1,12 @@
+Raheimeen Sherafgan: i200427
+    Currently overlooking the merging
+    Added the flask multiply and divide functionalities 
+    Made the virtual environment
+    Added + uploaded the docker file 
+Aashan Javed: i200491
+    Wrote most of the tests in the test_hello.py 
+    wrote the code for the add flask functionality
+
+Tehreem Arbab: i202481
+    Wrote the subtraction flask functionality 
+    
