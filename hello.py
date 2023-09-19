@@ -29,6 +29,14 @@ def calculate_add(num1, num2):
 def calculate_sub(num1, num2):
     result = sub(num1, num2)
     return jsonify({"result": result})
+@app.route('/calc/mul/<int:num1>/<int:num2>', methods=['GET'])
+def calculate_mul(num1, num2):
+    result = mul(num1, num2)
+    return jsonify({"result": result})
+@app.route('/calc/div/<int:num1>/<int:num2>', methods=['GET'])
+def calculate_div(num1, num2):
+    result = div(num1, num2)
+    return jsonify({"result": result})
 
 if __name__ == '__main__':
     app.run(port=5000)
