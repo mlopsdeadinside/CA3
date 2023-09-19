@@ -25,6 +25,9 @@ def hello():
 @app.route('/calc/add/<int:num1>/<int:num2>', methods=['GET'])
 def calculate_add(num1, num2):
     result = add(num1, num2)
+@app.route('/calc/sub/<int:num1>/<int:num2>', methods=['GET'])
+def calculate_sub(num1, num2):
+    result = sub(num1, num2)
     return jsonify({"result": result})
 
 if __name__ == '__main__':
