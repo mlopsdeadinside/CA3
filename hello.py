@@ -1,3 +1,8 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+
 def add(x,y):
     return x+y
 
@@ -7,4 +12,24 @@ def mul(x,y):
 def sub(x,y):
     return x-y
 
+def div(x,y):
+    return x/y
 
+@app.route('/')
+def hello():
+    """Return a friendly HTTP greeting."""
+    print("I am inside hello world")
+    return 'Hello World! I can make change at route: /change'
+
+# Define routes for calculator operations
+@app.route('/calc/mul/<int:num1>/<int:num2>', methods=['GET'])
+def calculate_mul(num1, num2):
+    result = mul(num1, num2)
+    return jsonify({"result": result})
+@app.route('/calc/div/<int:num1>/<int:num2>', methods=['GET'])
+def calculate_div(num1, num2):
+    result = div(num1, num2)
+    return jsonify({"result": result})
+
+if __name__ == '__main__':
+    app.run(port=5000)
